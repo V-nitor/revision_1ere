@@ -1,0 +1,9 @@
+(ENG)Detailed Exercice
+
+I tried to make a web page avoiding using too many videos found on Youtube. Mainly by helping me from "developer.mozilla.org" and my previous exercises. The aim of practice was to rework my some gaps in a single page. I haven't done everything but here's what it looks like. Thank you very much for your time to observe my work... Despite my misplaced humor at times :) .
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+(FR)Détail de l'exercice
+
+J'ai essayé de faire une page web en évitant d'utiliser trop de vidéo trouvé sur Youtube. Principalement en m'aidant de "developer.mozilla.org" et de mes précédants exercices. Le but de cet exercice était de retravailler mes lacunes en une seule page. Je n'ai pas pu faire tous ce que je voulais mais voilà ce que ça en donne. Merci infiniment de votre temps pour observer mon travail... Malgré mon humour déplacé par moment :) .

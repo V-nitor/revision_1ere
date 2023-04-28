@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Début de révision HTML & CSS</title>
+    <link rel="shortcut icon" href="./Assets/icon-HTML-CSS.png">
+    <link rel="stylesheet" href="Adjust_Scratch1.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Cours d'Application sur l'Hyper Text Markup Language&lt;HTML&gt; et le Cascading Style Sheets{CSS}</h1>
+
+    </header>
+
+    <main>
+
+        <article>
+            <h3>Le &#10092 p &#10093 en HTML</h3>
+
+            <p>Les paragraphes sont des éléments blocs.</p>
+            <p>Pour modifier l'espacement entre les paragraphes, il faudra utiliser la propriété CSS margin.</p>
+            <p>Il ne faut pas insérer de paragraphes vides ou d'éléments &lt; br &gt; afin de créer un espace.</p>
+            <p>L'utilisation de paragraphes vides (des éléments HTML &#10092 p &#10093 sans contenu) est problématique pour les personnes qui naviguent sur une page à l'aide d'outils d'assistance.</p>
+            <p>Les lecteurs d'écran, par exemple, pourraient annoncer l'élément mais pas le contenu associé ce qui peut être frustrant ou source de confusion.</p>
+
+        </article>
+
+        <article>
+            <h3>L'élément de rupture thématique</h3>
+
+            <p>&#10092 hr &#10093 représente un changement thématique entre des éléments de paragraphe.</p>
+            <hr> <!--À adapter cette ligne en css-->
+            <p>Par exemple: un changement de décor dans un récit, un changement de sujet au sein d'une section.</p>
+
+        </article>
+
+        <article>
+            <h3>L'élément de saut de ligne</h3>
+
+            <p>&#10092 br &#10093 crée un saut de ligne (un retour chariot) dans le texte<br>
+                Il s'avère utile lorsque les sauts de ligne ont une importance<br>
+                Par exemple lorsqu'on écrit une adresse ou un poème<br>
+                Cet élément est inclus à chaque point où nous voulons que le texte soit interrompu<br>
+                Le texte après le &#10092 br &#10093 recommence au début de la ligne suivante du bloc de texte<br>
+                Rappel: &#10092 br &#10093 ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte<br>
+                Pour cela, on utilisera la propriété CSS margin sur l'élément HTML &lt; p &gt;<br>
+                Il n'a aucun rôle purement stylistique et il sert uniquement à créer une rupture de ligne au sein d'un bloc de texte<br>
+                Cet élément pourra très peu être mis en forme avec CSS<br>
+                Utiliser une suite d'éléments &#10092 br &#10093 pour uniquement rajouter un espace entre des paragraphes<br>
+                Sera source de confusion ou de frustration pour les personnes qui utilisent des outils d'assistance<br>
+                Les lecteurs d'écran, par exemple, pourront annoncer la présence de l'élément alors qu'il n'y a aucun contenu associé<br>
+                Encore une fois: espace supplémentaire = margin, la propriété CSS
+            </p>
+
+        </article>
+
+        <div id="container">
+            <article>
+                <h3>L'élément de division du contenu</h3>
+
+                <div>
+                    <p>&#10092 div &#10093 (ou division) n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de CSS.</p>
+                    <p>En tant que conteneur « pur », il ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs "class" ou "id", pour marquer une SECTION d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut "lang"), etc.</p>
+                    <p>L'élément &#10092 div &#10093 doit uniquement être utilisé lorsqu'il n'existe aucun autre élément dont la sémantique permet de représenter le contenu (par exemple &lt; article &gt; ou &lt; nav &gt;).</p>
+                    <div class="shadowbox">
+                        <p>Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via du CSS sur l'élément &#10092 div &#10093!</p>
+                    </div>
+                </div>
+
+            </article>
+
+            <article>
+                <h3 id="span_title">Le &#10092 span &#10093 en HTML</h3>
+
+                <div>
+                    <p>
+                     Il est un conteneur générique en ligne (inline) pour les contenus phrasés.<br>
+                     Comme pour &lt; div &gt;, il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs "class" ou "id" et aux règles CSS) ou parce qu'ils partagent certaines valeurs d'attribut comme "lang".<br>
+                     &#10092 span &#10093 est très proche de l'élément &lt; div &gt;, mais l'élément &lt; div &gt; est un élément <strong>de bloc</strong>, alors que &#10092 span &#10093 est un élément <strong>en ligne</strong><br>
+                     Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié.
+                    </p>
+                </div>
+
+            </article>
+        </div>
+
+        <article>
+            <h3>L'élément de liste de descriptions</h3>
+
+            <p>&#10092 dl &#10093 représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments &lt; dt &gt;) et leurs descriptions ou définitions (fournies par des éléments &lt; dd &gt;).</p>
+            <p>On utilisera par exemple cet élément pour implémenter un <a href="https://www.linternaute.fr/dictionnaire/fr/definition/glossaire/" target="_blank" class="wit">glossaire</a> :</p>
+
+            <dl>
+                <dt>&lt; dt &gt;</dt>
+                <dt>L'élément pour le terme d'une description</dt>
+                <dd>Identifie un terme dans une liste de définitions ou de descriptions.</dd>
+                <dd>Plusieurs éléments qui se suivent indiqueront qu'ils partagent la définition/description fournie par le prochain élément &lt; dd &gt;.</dd> <!--Espace en bas ?-->
+
+                <dt>&lt; dd &gt;</dt>
+                <dt>L'élément de détail d'une description</dt>
+                <dd>Fournit la description, la définition ou la valeur du terme précédent dans une liste de description.</dd>
+            </dl>
+
+        </article>
+
+        <article class="table">
+            <div align="center">
+
+                <h3>L'élément de tableau</h3>
+
+                <table border="5" width="90%">
+                    <caption>Mon notation personnel sur Switch</caption>
+
+                 <thead>
+                      <th colspan="2">SpiderHeck</th>
+                      <tr>
+                          <th>Genre</th>
+                          <th>Vote sur 10</th>
+                      </tr>
+                 </thead>
+
+                 <tbody>
+                       <tr>
+                           <td>Combat en duel</td>
+                           <td>10</td>
+                       </tr>
+
+                      <tr>
+                          <th>Cercles de l'enf'heck</th>
+                          <td>4</td>
+                      </tr>
+
+                      <tr>
+                          <td>Survie par vagues</td>
+                           <td>10</td>
+                        </tr>
+                 </tbody>
+                 <!-- tfoot="Définit un ensemble de lignes qui résument les colonnes du tableau" en bas -->
+                 <tfoot>
+                     <tr>
+                         <th>Totals</th>
+                         <th>24</th>
+                     </tr>
+                 </tfoot>
+
+                </table>
+            </div>
+            
+            <div align="center">
+
+                <h3>L'élément regroupant des colonnes (d'un tableau)</h3>
+            
+                <table border="1" width="90%">
+                  <caption>Style des différents bagarreur basé sur la physique (physics-based brawler)</caption>
+                 <!-- colgroup="Définit un groupe de colonnes au sein d'un tableau" en bas -->
+                 <colgroup>
+                        <!-- col="Définit une colonne appartenant au tableau. C'est comme un <span> version tableau" en bas -->
+                        <!-- Info= pour mettre une colonne vide, mettre une balise vide comme en bas -->
+                        <col>
+                        <col span="2" class="2D">
+                        <col span="2" class="3D">
+                 </colgroup>
+
+                 <!-- tr=Table-row en bas -->
+                 <tr>
+                       <td></td>
+                       <th>SpiderHeck</th>
+                       <th>Stick Fight</th>
+                       <th>Bare Butt Boxing</th>
+                       <th>Gang Beasts</th>
+                 </tr>
+
+                 <tr>
+                        <th>Spécificité</th>
+                        <td>tisser des toiles</td>
+                        <td>frapper au corps à corps</td>
+                       <td>?</td>
+                        <td>Agripper ses adversaires</td>
+                 </tr> <!--Plus intéressant en utilisant le CSS-->
+                </table>
+
+            </div>
+
+        </article>
+
+        <article>
+            <h3>L'élément vidéo (à faire un exercice ENTIER sur ça)</h3>
+
+            <div id="video-container">
+                <!-- controls="Permet à l'utilisateur d'avoir un controle sur le fichier en question" en bas -->
+                <video controls loop muted controlslist="nofullscreen">
+                   <source src="./Assets/Cascade - 314.mp4" type="video/mp4">
+                </video>
+                <div class="link">
+                    <a href="file:///C:/Users/---/revision_1ere/index3.html" id="bg_download_video" download="Cascade - 314.mp4">Telecharger <img src="./Assets/Download Icon Video-Modified.png"></a>
+                </div>
+            </div>
+
+        </article>
+
+        <article>
+            <h3>L'élément représentant un formulaire (à faire un exercice ENTIER sur ça) + input type="number"</h3>
+            
+            <!-- action="Spécifie où envoyer les données de formulaire lorsqu'un formulaire est [submit]"; method="Utilise la communication entre navigateur et/ou serveur web +cie"; get="Données du formulaire annexées à l'URL [action] avec le séparateur [?]. Utile pour un formulaire sans effet secondaire" en bas -->
+            <form action="" method="get" class="form-exercise">
+                <div class="form-exercise">
+                    <label for="age">Ton âge:</label>
+                    <!-- required="L'utilisateur doit spécifier une valeur avant de poursuivre le formulaire" en bas -->
+                    <input id="age" type="number" placeholder="Içi" min="10" max="120" required>
+                </div>
+                <div class="form-exercise">
+                    <label for="email">Ton mail (0 ͜0):</label>
+                    <!-- name="Permet d'avoir une valeur unique parmi tous les utilisateurs" en bas -->
+                    <input id=email type="email" name="email" required>
+                </div>
+            </form>
+
+            <form action="" method="get" class="form-exercise">
+                <div class="form-exercise">
+                    <input type="submit" value="Merci de nous partager ta vie :)">
+                </div>
+            </form>
+
+        </article>
+
+    </main>
+
+    <footer>
+
+        <div>
+        <h5><em>Lien pour vérifier:</em></h5>
+
+        <ol>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/section" target="_blank" class="wit">L'élément &lt;section&gt;</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/header" target="_blank" class="wit">L'élément &lt;header&gt;</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/main" target="_blank" class="wit">L'élément &lt;main&gt;</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/article" target="_blank" class="wit">L'élément &lt;article&gt;</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/nav" target="_blank" class="wit">L'élément &lt;nav&gt; (navigation)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/footer" target="_blank" class="wit">L'élément &lt;footer&gt;</a></li>
+        </ol>
+        <hr>
+        <ul>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/p" target="_blank" class="wit">p : l'élément paragraphe en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/hr" target="_blank" class="wit">hr : l'élément de rupture thématique en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/br" target="_blank" class="wit">br : l'élément de saut de ligne en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/div" target="_blank" class="wit">div : l'élément de division du contenu en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/span" target="_blank" class="wit">span : l'élément de contenu phrasé en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/dl" target="_blank" class="wit">dl : l'élément de liste de descriptions en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/table" target="_blank" class="wit">table : l'élément de tableau en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/col" target="_blank" class="wit">colgroup : l'élément regroupant des colonnes en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/video" target="_blank" class="wit">video : l'élément vidéo en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Form" target="_blank" class="wit">form : l'élément représentant un formulaire en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/number" target="_blank" class="wit">input type="number" : le contrôle intéractif numérique en HTML(Hyper Text Markup Language)</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/position" target="_blank" class="wit">La [position] en CSS(Cascading Style Sheets)</a> - (=Notions dans les com)</li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform" target="_blank" class="wit">Le [transform] en CSS(Cascading Style Sheets)</a> - (<a href="https://www.youtube.com/watch?v=jQG3hAbXQVY&t=902s" target="_blank" class="wit">Découverte du CSS (16/31) : Transform</a>) - (=Notions dans les com)</li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/display" target="_blank" class="wit">Le [display] en CSS(Cascading Style Sheets)</a> (=Non exécuté dans cette exercice car sujet trop conséquent)</li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/flex" target="_blank" class="wit">Le [flex] en CSS(Cascading Style Sheets)</a> (=Non exécuté dans cette exercice car sujet assez conséquent)</li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/grid" target="_blank" class="wit">Le [grid] en CSS(Cascading Style Sheets)</a> (=Non exécuté dans cette exercice car sujet trop conséquent)</li>
+        </ul>
+        <hr>
+        <div id="conclusion">
+            <p><strong>Aide pour le CSS:</strong></p>
+            <ul>
+              <li><a href="https://flexbox.help/" target="_blank" class="help_css">https://flexbox.help/</a></li>
+              <li><a href="https://cssgenerator.org/" target="_blank" class="help_css">https://cssgenerator.org/</a></li>
+              <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/list-style-type" target="_blank" class="help_css">Les différents types de [list-style-type]</a></li>
+              <li><a href="https://css-tricks.com/using-css-cursors/" target="_blank" class="help_css">Changing the Cursor with CSS for Better User Experience (or Fun)</a></li>
+              <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/justify-content" target="_blank" class="help_css">Le [justify-content] en CSS(Cascading Style Sheets)</a></li>
+            </ul>
+            <hr id="hr_conclusion">
+            <p><em>Autres outils pour espérer d'aller plus loin:</em></p>
+            <ul id="unlist_conclusion">
+                <li><a href="https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software" class="link_conclusion">Installation des outils de base</a></li>
+                <li><a href="https://developer.mozilla.org/fr/docs/Glossary/Block/CSS" class="link_conclusion">Block (CSS)</a></li>
+                <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout" class="link_conclusion">Concepts de base des grilles CSS</a></li>
+                <li><a href="https://tutorialehtml.com/fr/html-zones-de-texte/" class="link_conclusion">Commentaires et zone de texte</a></li>
+                <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" class="link_conclusion">Utiliser les transitions CSS</a></li>
+                <li><a href="https://developer.mozilla.org/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content" class="link_conclusion">Contenu audio et vidéo</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video" class="link_conclusion">Captions and subtitles to HTML video</a></li>
+            </ul>
+        </div>
+
+        </div>
+
+    </footer>
+    
+</body>
+</html>
+
+<!-- dt {
+    font-style: oblique;
+} -->
+
+<!-- dd {
+    margin-bottom: 1rem;
+} -->
+
+<!-- caption {
+    caption-side: bottom;
+} -->

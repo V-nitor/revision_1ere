@@ -1,0 +1,177 @@
+/* ------------- Page web globale ------------- */
+
+body{
+    background-color: rgb(220, 155, 155);
+}
+
+/* ------------- Contenu div & span ------------- */
+
+#container{
+    /* column-count="Nombre de colone à ajouter" */
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    /* column-gap="Taille des barres qui sépare les éléments */
+    column-gap: 30px;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    /* column-rule="Style de la colonne [solid;double;dotted;dashed;etc.] + sa taille + sa couleur " */
+    column-rule: 5px solid #53c540;
+    -webkit-column-rule: 5px solid #53c540;
+    -moz-column-rule: 5px solid #53c540;
+}
+
+.shadowbox{
+    width: 15em;
+    border: 3px solid rgb(51, 51, 51);
+    box-shadow: 6px 6px 7px rgb(68, 68, 68);
+    padding: 8px 12px;
+    background-image: linear-gradient(180deg, rgb(255, 255, 255), rgb(221, 221, 221) 40%, rgb(204, 204, 204));
+}
+
+#span_title{
+    margin-top: 200px;
+}
+
+/* ------------- Tableaux ------------- */
+
+.table{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: stretch;
+}
+
+/* ------------- Telechargement Video Local ------------- */
+
+#video-container{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+video{
+    margin: 10px 20px 50px 30px;
+}
+
+.link{
+    display: flex;
+    margin: auto;
+    border-radius: 4px;
+    font-size: 30px;
+    /* fit-content="Permet à notre boîte d'avoir la même taille que le contenu" en bas */
+    width: fit-content;
+    padding: 5px 0px 5px 5px;
+    background-color: rgb(8, 15, 80);
+}
+
+.link:hover{
+    cursor: pointer;
+    background-color:rgb(40, 170, 40);
+    transition: 3s;
+    transform:scale(10px)
+}
+
+/*#bg_download_video{
+    color:rgb(174, 174, 174);*/
+
+/* ------------- Formulaire ------------- */
+
+/* Info=Juste en dessous, ne peux servir à rien d'autre que préciser au code ce qui suit sera un tableau */
+form.form-exercise{
+    display: table;
+}
+
+div.form-exercise{
+    display: table-row;
+}
+
+label{
+    font-weight: 700;
+    font-style: italic;
+    text-transform: lowercase;
+    font-family: 'Courier New', Courier, monospace;
+    /* table-cell= permet au élément de s'afficher l'un à côté de l'autre. À en savoir plus sur:https://www.alsacreations.com/tuto/lire/1523-le-modele-tabulaire-en-css.html */
+    display: table-cell;
+    padding-bottom: 30px;
+}
+
+input[type="number"]{
+    margin-left: 45px;
+}
+
+input[type="email"]{
+    margin-left: 45px;
+}
+
+input[type="submit"]{
+    font-family: 'Courier New', Courier, monospace;
+    width: 21rem;
+    height: 3rem;
+}
+
+/* ------------- Liens externe ------------- */
+
+.wit{
+    cursor: help;
+}
+
+.help_css{
+    cursor: zoom-in;
+}
+
+#conclusion{
+    border: 2px solid rgb(225, 12, 12);
+    background: rgba(5, 140, 135, 0.605);
+    padding: 20px 50px;
+}
+
+#hr_conclusion{
+    border: 4px dashed rgb(44, 44, 44)
+}
+
+#unlist_conclusion{
+    padding-left: 0px;
+    list-style-type: circle;
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.link_conclusion{
+    cursor: pointer;
+}
+
+/* !!!!!!!!!!!!! Instructions pour la [position] !!!!!!!!!!!!! */
+
+
+/* Info= La [position] doit être utilisé pour des cas spécifique. Si juste occasionnel, utiliser le [flexbox]. Par défault les éléments de type [position] sont devant la page, avec pour valeur malgrès tout [z-index]=1 */
+/* Info= Les déplacements [top, bottom, left et right] ne fonctionneront pas sans spécification de la [position] */
+/* Info pour position STATIC= Comportement par défault de l'élément, les propriétés de direction n'ont aucun impact */
+/* Info= Par défault, pour tous les éléments le [z-index] est à 1. Pour rappel, il permet qu'un élément soit plus ou moins devant les autres en fonction de sa valeur (1=derrière, au-dessus de 1=devant, auto=en dessous de 1) */
+/* Info pour position ABSOLUTE= L'élément devient inexistant pour la page. Par conséquent, l'élément qui le succéde prend sa place. Il peut être déplacé n'importe où */
+/* Info= Pour qu'un élément en position ABSOLUTE navigue dans son parent, le parent DOIT ÊTRE en position RELATIVE */
+/* Info pour position RELATIVE= Les déplacements de l'élément débute à partir de sa position initiale */
+/* Info pour position FIXED= L'élément devient inexistant pour la page. Par conséquent, l'élément qui le succéde prend sa place. Une fois positionné, il ne bouge pas de l'écrand même si il y'a un scroll. À utiliser pour un élément qui n'est pas encombrant pour la page */
+/* Info pour position STICKY= Les directions ne signifient pas les déplacements, ils signifient à l'élément QUAND se déplacer au même moment que l'écrand (à utiliser: [top] de préférence ou [bottom]). À noter que si il a un parent, il ne sortira pas de celui-ci */
+
+/* !!!!!!!!!!!!! Instructions pour le [transform] !!!!!!!!!!!!! */
+
+/* Info= Le [transform] est utilisé pour modifier l'espace des coordonnées d'un élément NON TEXTUEL SEUL */
+/* Info pour transform TRANSLATE= Permet de faire glisser un élément (pour rappel: non textuel seul) sur la page en donnant juste entre parenthèse la "Première valeur=l'axe x (px,)" et la "Deuxième valeur=l'axe y" */
+/* Info= Il existe le [transform: translate] permettant de changer la position d'un élément. Or, quelle difference avec la [position: relative]? Le [transform] déplace l'élément sans changer la structure de la page alors que la [position] re-structure la page par rapport à sa nouvelle position? Peu avoir plus d'importance sur des animations? */
+/* Info pour transform ROTATE= Permet une rotation d'un élément dans le sens d'une aiguille d'une montre. Signifier les degres en CSS est: "deg". La seconde valeur pouvant être utilisé est: "turn"(=tourner) qui est de 360°, sachant que [1turn] ne change rien en revenche [0.5], [0.25], [-0.5] et [-0.25] oui */
+/* Info= [rotate] peut être très bien utilisé pour faire de la 3D à l'élément en question grâce à la valeur [perspective] (exprimé en px dans son [div] CLASSÉ respective). Soit avec [rotateX] ou bien [rotateY] */
+/* Info= En parlant de [perspective], il est possible de changer le point d'ORIGINE de la perspective grâce au [perspective-origin] pouvant désigner: top, bottom, right et left. Faire une combinaison entre l'axe x et l'axe y est possible. En parlant de changer le point d'origine, le [transform-origin] fonctionne exactement de la même manière */
+/* Info pour transform SCALE= Permet de grandir ou de raptissir l'élément en question, (1) est la valeur par défault. Une valeur négative fait tourner l'élément de ses pieds du bas de la page en haut. Comme pour le [translate], entre parenthèse la "Première valeur=l'axe x (,)" et la "Deuxième valeur=l'axe y" pour des éléments étirés */
+/* Info= À noter que Le [transform: scale] est très intéressant pour grossir du texte quand la souris passe sur l'élément en question. Exactement de la même manière que pour changer la couleur d'un élément au passage de la sourie :). /!\, ces valeurs ne peuvent que multiplier (les valeurs [px] ne fonctionneront pas par exemple), il faudra donc jouer avec les nombres décimales */
+/* Info= Le [transform] peut accumuler plusieurs de ses fonctions ([rotate], [scale], etc.) en même temps lors d'un passage à la sourie pour de meilleur effet */
+/* Info pour transform SKEW= Permet de tourner un élément avec un petit effet de profondeur (3D) en donnant entre parenthèse la "Première valeur=l'axe x (deg,)" et la "Deuxième valeur=l'axe y" */
